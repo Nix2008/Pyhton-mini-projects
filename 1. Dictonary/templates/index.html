@@ -42,7 +42,11 @@
           <form action="/" method="POST">
             <div class="form-group">
               <label for="word">Enter The Word</label>
-              <input type="text" required class="form-control" id="word" name="word" >
+              <input type="text" required class="form-control" id="word" name="word">
+              {% for w in data %}
+                <h1> {{ w }} </h1>
+              {% endfor %}
+
             </div>
             <button class="btn btn-success">Submit</button>
           </form>
