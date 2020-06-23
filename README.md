@@ -1,1 +1,0 @@
-# Pyhton-mini-projects

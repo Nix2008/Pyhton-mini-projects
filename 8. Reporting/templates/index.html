@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Report a pothole</title>
+	<link href="../static/main.css" rel="stylesheet">
+</head>
+<body>
+	<div class=container>
+		<h1>Report a pothole</h1>
+		<h3>Please Fill The Entries</h3>
+		<div class="message">
+		{{text | safe}}			
+		</div>
+		<form action="{{ url_for('success')}}" method="POST">
+		<input type="email" placeholder="Enter email address" name="email_address"><br>
+		  <select class="pothole_option" placeholder="Select pothole type" name="pothole_type" required>
+		  	<option value="pothole">Select</option>
+		    <option value="pothole">Pothole</option>
+		    <option value="manhole">Manhole</option>
+		    <option value="divider">Divider</option>
+		    <option value="blackspot">Blackspot</option>
+		  </select><br>
+		  <select class="department_option" placeholder="Select department" name="department_name" required>
+		  	<option value="pothole">Select</option>
+		    <option value="dep1">Road Maintanance</option>
+		    <option value="dep2">Department 1</option>
+		    <option value="dep3">Department 2</option>
+		  </select><br>
+		  <textarea name="address" placeholder="Enter address" rows="5" required></textarea><br>
+		  <input type="text" placeholder="Enter landmark" name="landmark"><br>
+		  <textarea name="comment" placeholder="Describe your issue" rows="5"></textarea><br>
+		  <button type="submit"> Submit </button>
+	</div>
+</body>
+</html>
